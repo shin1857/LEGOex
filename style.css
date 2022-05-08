@@ -1,0 +1,393 @@
+/* style.css */
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+}
+
+ul {list-style-type: none;}
+a {
+    text-decoration: none;
+    color: black;
+}
+/* header */
+header {
+    position: fixed;
+    height: 50px;
+    width: 90%;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header img {
+    width: 60px;
+    height: 60px;
+    margin-top: 2%;
+}
+/* bg */
+#bg {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(./images/Who_we_are_cover.jpeg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: blue;
+}
+#bg h1 {
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: floralwhite;
+    font-size: 3rem;
+    /* outline: 2px solid red; */
+}
+#bg .bg_int {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+}
+#bg .bg_int span {
+    margin-right: 3%;
+    color: gainsboro;
+    font-size: 0.9rem;
+}
+#bg .bg_int .underline {position: relative;}
+#bg .bg_int .underline:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0;
+    height: 1px;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background-color: white;
+}
+#bg .bg_int .underline:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+/* lego_int */
+#lego_int {
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: white;
+    /* outline: 1px solid blue; */
+}
+#lego_int h1 {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+/* goal */
+#goal_section {
+    width: 100%;
+    /* height: 100vh; */
+    /* height: 880px; */
+    /* background-color: aliceblue; */
+    background-color: floralwhite;
+    overflow: hidden;
+}
+#goal_section .goal {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 85%;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    /* outline: 1px solid red; */
+}
+#goal_section .goal_color {
+    float: left;
+}
+#goal_section .goal_color > .circle {
+    width: 15px;
+    height: 15px;
+    background-color: #357cbe;
+    border-radius: 50%;
+    margin-top: 25%;
+}
+#goal_section .goal h2 {
+    float: left;
+    font-size: 1.5rem;
+}
+#goal_section .img {
+    margin: 0 auto;
+    height: 15em;
+    width: 85%;
+    background-image: url(./images/lego_goal.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 5%;
+}
+#goal_section .goal_in p {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    margin-bottom: 5%;
+}
+
+/* style */
+#style {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* height: 800px; */
+}
+#style .guide {
+    /* position: absolute; */
+    margin: 0 auto;
+    width: 85%;
+    height: 27rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    overflow: visible;
+    /* outline: 1px solid blue; */
+}
+#style .guide h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+}
+#style .guide .color_guide h3,
+#style .guide .font_style h3 {
+    font-size: 1rem;
+    margin-bottom: 15%;
+    text-align: left;
+    font-weight: 300;
+}
+#style .color_guide {
+    /* overflow: hidden; */
+    float: left;
+    width: 50%;
+    height: 90%;
+    /* margin-bottom: 4%; */
+    /* outline: 1px solid red; */
+    margin-bottom: 5%;
+}
+#style .color_guide .gu_color {
+    float: left;
+}
+#style .color_guide .gu_color .circle,
+#style .font_style .gu_color .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#style .color_guide .st_color {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin-bottom: 2%;
+}
+#style .color_guide .st_color.yellow {
+    background-color: #ffcf00;
+}
+#style .color_guide .st_color.red {
+    background-color: #d01012;
+}
+#style .color_guide .st_color.blue {
+    background-color: #201d48;
+}
+#style .color_guide .st_color span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-weight: 500;
+}
+#style .font_style {
+    float: left;
+    width: 50%;
+    /* height: 100%; */
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    /* outline: 1px solid red; */
+}
+#style .font_style p {
+    font-size: 1.3rem;
+    margin-bottom: 10%;
+}
+#style .font_style > div {
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+#style .font_style > div.b {font-weight: 700;}
+#style .font_style > div.m {font-weight: 600;}
+#style .font_style > div.r {font-weight: 400;}
+#style .font_style > div.l {font-weight: 300;}
+/* renewal */
+#renewal {
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    /* height: 100vh; */
+    background-color: floralwhite
+}
+#renewal .renewal_p {
+    overflow: hidden;
+    position: absolute;
+    width: 85%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* outline: 1px solid red; */
+}
+#renewal .renewal_p h2 {
+    float: left;
+    width: calc(100% - 15px);
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-size: 1.5rem;
+    /* outline: 1px solid blue; */
+}
+#renewal .renewal_p h2 span {
+    margin-left: 15%;
+    font-size: 1rem;
+    font-weight: 300;
+}
+#renewal .img {
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 5%;
+}
+#renewal .img img {
+    float: left;
+    width: 25%;
+}
+
+/* 반응형 */
+@media screen and (max-width:480px) {
+    #bg h1 {
+        font-size: 2rem;
+    }
+    #bg .bg_int span {
+        font-size: 0.7rem;
+    }
+    #lego_int h1 {
+        font-size: 1rem;
+    }
+    #goal_section .goal h2 {
+        font-size: 1.3rem;
+    }
+    #goal_section .img {
+        width: 100%;
+        height: 5em;
+    }
+    #goal_section .goal_in p {
+        margin-bottom: 8%;
+        font-size: 0.6rem;
+    }
+    #style .guide {
+        height: 90%;
+        height: 38rem;
+    }
+    #style .guide h2 {
+        font-size: 1.3rem;
+    }
+    #style .color_guide, 
+    #style .font_style {
+        width: 100%;
+        height: 55%;
+        float: none;
+    }
+    #style .guide .color_guide h3,
+    #style .guide .font_style h3 {
+        font-size: 0.7rem;
+    }
+    #style .color_guide .gu_color .circle,
+    #style .font_style .gu_color .circle {
+        margin-top: 5px;
+    }  
+    #style .color_guide .st_color {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 3%;
+    }
+    #style .color_guide .st_color span {
+        font-size: 0.8rem;
+    }
+    #style .font_style p {
+        font-size: 0.8rem;
+    }
+    #renewal .renewal_p {
+        height: 95%;
+    }
+    #renewal .renewal_p h2 {
+        font-size: 1.3rem;
+    }
+    #renewal .renewal_p h2 span {
+        font-size: 0.7rem;
+        display: block;
+        margin-left: 0;
+        margin-top: 1%;
+        margin-bottom: 5%;
+    }
+    #renewal .img img {
+        width: 50%;
+    }
+}
+@media all and (min-width:481px) and (max-width:768px) {
+    #bg h1 {
+        font-size: 2.5rem;
+    }
+    #lego_int h1 {
+        font-size: 1.3rem;
+    }
+    #goal_section .img {
+        width: 100%;
+        height: 10rem;
+    }
+    #style .guide {
+        height: 25rem;
+    }
+    #renewal {
+        /* height: 31rem; */
+        height: 23rem;
+        overflow: visible;
+    }
+    #renewal .renewal_p {
+        height: 95%;
+    }
+    #renewal .renewal_p h2 span {
+        display: block;
+        margin-left: 0;
+        margin-top: 1%;
+    }
+}
+@media all and (min-width:768px) and (max-width:1023px) {
+    #goal_section .img {
+        width: 100%;
+        height: 10em;
+    }
+    #renewal {
+        height: 32rem;
+    }
+}
+@media all and (min-width:1024px) and (max-width:1200px) {
+    #renewal {
+        height: 40rem;
+    }
+}
